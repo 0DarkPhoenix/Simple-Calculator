@@ -1,0 +1,36 @@
+{
+	"name": "simple-calculator",
+	"private": true,
+	"version": "0.1.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "npx @biomejs/biome format --write ./src && npx @biomejs/biome lint --write ./src && vite build",
+		"preview": "vite preview",
+		"tauri": "tauri"
+	},
+	"dependencies": {
+		"@emotion/react": "^11.14.0",
+		"@emotion/styled": "^11.14.0",
+		"@mui/icons-material": "^6.4.7",
+		"@mui/material": "^6.4.7",
+		"@tauri-apps/api": "^2.3.0",
+		"@tauri-apps/plugin-shell": "^2.2.0",
+		"function-plot": "^1.25.1",
+		"katex": "^0.16.21",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"react-katex": "^3.0.1",
+		"react-router-dom": "^6.30.0"
+	},
+	"devDependencies": {
+		"@tauri-apps/cli": "^2.3.1",
+		"@types/node": "^22.13.10",
+		"@types/react": "^19.0.10",
+		"@types/react-dom": "^19.0.4",
+		"@types/react-katex": "^3.0.4",
+		"@vitejs/plugin-react": "^4.3.4",
+		"typescript": "^5.8.2",
+		"vite": "^5.4.14"
+	}
+}

@@ -1,0 +1,196 @@
+{
+	// Biome Lint command: npx @biomejs/biome lint --write ./src
+	// Biome Format command: npx @biomejs/biome format --write ./src
+	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+	"organizeImports": {
+		"enabled": true
+	},
+	"files": {
+		"ignore": [
+			".vscode/**"
+		]
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"correctness": {
+				"noUnusedImports": {
+					"level": "info",
+					"fix": "safe"
+				},
+				"noUnusedLabels": {
+					"level": "info",
+					"fix": "none"
+				},
+				"noConstantMathMinMaxClamp": {
+					"level": "error",
+					"fix": "safe"
+				},
+				"noInvalidBuiltinInstantiation": {
+					"level": "error",
+					"fix": "safe"
+				},
+				"noUndeclaredVariables": {
+					"level": "warn"
+				},
+				"noUnusedVariables": {
+					"level": "warn"
+				},
+				"noUnusedFunctionParameters": {
+					"level": "warn"
+				},
+				"noUnusedPrivateClassMembers": {
+					"level": "warn"
+				},
+				"useHookAtTopLevel": {
+					"level": "error",
+					"options": {}
+				},
+				"noSwitchDeclarations": {
+					"level": "warn",
+					"fix": "safe"
+				}
+			},
+			"complexity": {
+				"noUselessStringConcat": {
+					"level": "error"
+				},
+				"useDateNow": {
+					"level": "warn",
+					"fix": "safe"
+				},
+				"useSimplifiedLogicExpression": {
+					"level": "warn"
+				}
+			},
+			"suspicious": {
+				"noConsole": {
+					"level": "warn",
+					"options": {
+						"allow": [
+							"info",
+							"warn",
+							"error"
+						]
+					}
+				},
+				"noAssignInExpressions": {
+					"level": "off"
+				},
+				"noEmptyBlockStatements": {
+					"level": "error"
+				},
+				"useAwait": {
+					"level": "error"
+				},
+				"useNumberToFixedDigitsArgument": {
+					"level": "error"
+				}
+			},
+			"style": {
+				"useConst": {
+					"level": "warn",
+					"fix": "safe"
+				},
+				"useNodejsImportProtocol": {
+					"level": "warn",
+					"fix": "safe"
+				},
+				"noUnusedTemplateLiteral": {
+					"level": "warn",
+					"fix": "safe"
+				},
+				"noNegationElse": {
+					"level": "warn"
+				},
+				"noYodaExpression": {
+					"level": "warn"
+				},
+				"useBlockStatements": {
+					"level": "warn",
+					"fix": "safe"
+				},
+				"useCollapsedElseIf": {
+					"level": "warn"
+				},
+				"useSingleVarDeclarator": {
+					"level": "warn",
+					"fix": "safe"
+				},
+				"useConsistentBuiltinInstantiation": {
+					"level": "warn",
+					"fix": "safe"
+				},
+				"useDefaultSwitchClause": {
+					"level": "error"
+				},
+				"useExplicitLengthCheck": {
+					"level": "error"
+				},
+				"useFragmentSyntax": {
+					"level": "warn",
+					"fix": "safe"
+				},
+				"useThrowNewError": {
+					"level": "warn",
+					"fix": "safe"
+				},
+				"useNamingConvention": {
+					"level": "warn",
+					"options": {
+						"strictCase": true,
+						"requireAscii": true,
+						"conventions": [
+							{
+								"selector": {
+									"kind": "objectLiteralMethod",
+									"scope": "any"
+								},
+								"formats": [
+									"camelCase",
+									"PascalCase"
+								]
+							},
+							{
+								"selector": {
+									"kind": "objectLiteralProperty",
+									"scope": "any"
+								},
+								"formats": [
+									"camelCase",
+									"PascalCase"
+								]
+							}
+						]
+					}
+				}
+			}
+		}
+	},
+	"formatter": {
+		"enabled": true,
+		"formatWithErrors": true,
+		"attributePosition": "auto",
+		"indentStyle": "tab",
+		"indentWidth": 4,
+		"lineWidth": 100,
+		"lineEnding": "lf"
+	},
+	"javascript": {
+		"formatter": {
+			"arrowParentheses": "always",
+			"bracketSameLine": false,
+			"bracketSpacing": true,
+			"jsxQuoteStyle": "single",
+			"quoteProperties": "asNeeded",
+			"semicolons": "always",
+			"trailingCommas": "all"
+		}
+	},
+	"json": {
+		"formatter": {
+			"trailingCommas": "none"
+		}
+	}
+}
